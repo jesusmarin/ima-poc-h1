@@ -1,0 +1,9 @@
+{
+  "h1_initial_candidate": "adopt/keycloak",
+  "candidate_version_tag": "quay.io/keycloak/keycloak:26.8.1",
+  "source": "https://www.keycloak.org/getting-started/getting-started-docker",
+  "selection_status": "experimental; not selected by ADR-001",
+  "other_candidates": ["adopt/authentik", "extend/ory-hydra-plus-identity", "extend/spring-authorization-server-plus-components", "build/limited-reference-spike"],
+  "version_or_digest_for_other_candidates": "pending H0-DEC-03",
+  "security_note": "start-dev + HTTP ONLY for 127.0.0.1; no production, no real personal data"
+}

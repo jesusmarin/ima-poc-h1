@@ -1,0 +1,10 @@
+.local/
+evidence/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+.DS_Store

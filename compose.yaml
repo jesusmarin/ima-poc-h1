@@ -1,0 +1,20 @@
+name: iam-poc-h1
+services:
+  keycloak:
+    image: ${KEYCLOAK_IMAGE:?Ejecutar scripts/Lock-Keycloak.ps1 para fijar digest}
+    command: ["start-dev"]
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: ${KC_BOOTSTRAP_ADMIN_USERNAME:?Se requiere usuario sintetico}
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ${KC_BOOTSTRAP_ADMIN_PASSWORD:?Se requiere clave local}
+      KC_HEALTH_ENABLED: "true"
+      KC_HOSTNAME: "http://localhost:18080"
+    ports:
+      - "127.0.0.1:18080:8080"
+    networks:
+      - kc_lab
+    restart: "no"
+    security_opt:
+      - no-new-privileges:true
+networks:
+  kc_lab:
+    driver: bridge
