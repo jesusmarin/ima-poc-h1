@@ -1,0 +1,17 @@
+{
+  "realm": "iam-poc",
+  "enabled": true,
+  "sslRequired": "external",
+  "defaultSignatureAlgorithm": "RS256",
+  "registrationAllowed": false,
+  "loginWithEmailAllowed": true,
+  "duplicateEmailsAllowed": false,
+  "verifyEmail": false,
+  "accessTokenLifespan": 300,
+  "ssoSessionIdleTimeout": 1800,
+  "ssoSessionMaxLifespan": 36000,
+  "revokeRefreshToken": false,
+  "bruteForceProtected": false,
+  "eventsEnabled": false,
+  "adminEventsEnabled": false
+}

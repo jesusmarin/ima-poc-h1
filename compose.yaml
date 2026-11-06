@@ -15,6 +15,12 @@ services:
     restart: "no"
     security_opt:
       - no-new-privileges:true
+    volumes:
+      - keycloak_data:/opt/keycloak/data
 networks:
   kc_lab:
     driver: bridge
+volumes:
+  keycloak_data:
+    external: true
+    name: iam-poc-h1_keycloak_data
